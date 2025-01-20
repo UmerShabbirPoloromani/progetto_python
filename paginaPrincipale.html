@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Biblioteca</title>
+    <title>Bookshelf</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -50,7 +50,7 @@
         <div>
           <h1 style="margin-left: 720px;"><i class="fa-solid fa-book-open"></i></h1>
           <p style="font-size: 10px; margin-left: 630px;">By: Umar Shabbir, Akalpreet Singh and Davide Cirelli</p>
-          <h1 style="margin-left: 630px; font-weight: bold;">BIBLIOTECA</h1>
+          <h1 style="margin-left: 630px; font-weight: bold;">BOOKSHELF</h1>
         </div>
         <hr>
     </header>
@@ -61,7 +61,9 @@
               <td>
                 <!-- Button trigger modal -->
                 <div>
-                  <button style="height: 500px; width: 100%;" type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal"></button>
+                  <button style="height: 500px; width: 100%; padding: 0; border: none;" type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    <img src="img/HarryPotterFilosofale1.jpg" style="height: 100%; width: 100%; object-fit: fill; display: block; margin: 0; border-radius: 15px;">
+                  </button>
                 </div>
 
                 <!-- Modal -->
@@ -84,15 +86,16 @@
                             <tr style="">
                               <td class="no-style" style="width: 250px;">
 
-                                <div class="carousel-inner">
-                                  <div class="carousel-item active">
-                                    <img src="img/HarryPotterFilosofale1.jpg" class="d-block w-100">
-                                  </div>
-                                  <div class="carousel-item">
-                                    <img src="img/HarryPotterFilosofale2.jpg" class="d-block w-100">
+                                <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+                                  <div class="carousel-inner">
+                                    <div class="carousel-item active" data-bs-interval="3000">
+                                      <img src="img/HarryPotterFilosofale1.jpg" class="d-block w-100" alt="...">
+                                    </div>
+                                    <div class="carousel-item" data-bs-interval="3000">
+                                      <img src="img/HarryPotterFilosofale2.jpg" class="d-block w-100" alt="...">
+                                    </div>
                                   </div>
                                 </div>
-
                               </td>
                               <td class="no-style">
                                 Harry Potter e la Pietra Filosofale, il primo capitolo della celebre saga scritta da J.K. Rowling, ti invita <br> in un viaggio straordinario nel mondo incantato di Hogwarts, dove ogni pagina è ricca di avventure,<br> misteri e amicizie indimenticabili.<br><br>
@@ -106,14 +109,6 @@
                             </tr>
                           </table>
 
-                          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Previous</span>
-                          </button>
-                          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Next</span>
-                          </button>
                         </div>
                       </div>
                     </div>
