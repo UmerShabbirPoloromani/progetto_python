@@ -1,5 +1,6 @@
 from flask import Flask, request, render_template
 from bs4 import BeautifulSoup  # Per modificare l'HTML
+import json, os, random
 
 app = Flask(__name__)
 
