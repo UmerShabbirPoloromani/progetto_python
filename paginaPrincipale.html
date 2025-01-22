@@ -111,20 +111,26 @@
 
                         </div>
                       </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" >Modify</button>
+                        <button type="button" class="btn btn-danger">Delete Book</button>
+                      </div>
                     </div>
                   </div>
                 </div>
               </td>
               <td style="width: 25%;">
-                <div style="margin-left: 45%;">
-                  <button style="border-radius: 100px;"><i class="fa-solid fa-plus"></i></button>
-                </div>        
+                <form action="/process" method="POST">
+                  <div style="margin-left: 45%;">
+                    <button style="border-radius: 100px;" type="submit"><i class="fa-solid fa-plus"></i></button>
+                  </div>     
+                </form>   
               </td>
               <td class="no-style" style="width: 25%;">
 
               </td>
               <td class="no-style" style="width: 25%;">
-                
+
               </td>  
           </tr> 
         </table>
