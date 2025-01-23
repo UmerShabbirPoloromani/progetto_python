@@ -1,13 +1,17 @@
-from flask import Flask, request, render_template
+from flask import Flask, request, render_template, redirect, url_for
 from bs4 import BeautifulSoup  # Per modificare l'HTML
 import json, os, random
 
 app = Flask(__name__)
 
-@app.route("/", methods=["GET", "POST"])
+@app.route("/")
 def home():
-   
     return render_template("paginaPrincipale.html")
+
+@app.route("/upload", methods=['GET', 'POST'])
+def carica():
+    return redirect(url_for('home'))
+
 
 @app.route("/inserisci")
 def inserisci():
