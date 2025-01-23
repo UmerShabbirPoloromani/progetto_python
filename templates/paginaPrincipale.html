@@ -1,271 +1,186 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bookshelf</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <style>
-      body {
-        
-          justify-content: center;
-          align-items: center;
-          height: 100vh;
-          margin: 0;
-          background-color: #f5f5f5;
-      }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bookshelf</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
+  </script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    body {
 
-      table {
-          border-collapse: separate; /* Necessario per radius sui blocchi */
-          border-spacing: 50px; /* Spaziatura tra i blocchi */
-      }
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #f5f5f5;
+    }
 
-      td {
-          width: 400px;
-          height: 460px;
-          background-color: #ffffff;
-          border: 2px solid #000;
-          border-radius: 15px; /* Arrotondamento dei bordi */
-          box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Ombreggiatura */
-      }
-      body {
-          background-color: rgb(231, 229, 229); 
-      }
+    table {
+      width: 100%;
+      border-collapse: separate;
+      /* Necessario per radius sui blocchi */
+      border-spacing: 50px;
+      /* Spaziatura tra i blocchi */
+    }
 
-      .no-style {
-        width: auto; /* Annulla larghezza */
-        height: auto; /* Annulla altezza */
-        background-color: transparent; /* Colore di sfondo trasparente */
-        border: none; /* Rimuove il bordo */
-        box-shadow: none; /* Rimuove ombreggiatura */
-        border-radius: 0; /* Rimuove angoli arrotondati */
-      }
+    td {
+      width: 200px;
+      height: 460px;
+      background-color: #ffffff;
+      border: 2px solid #000;
+      border-radius: 15px;
+      /* Arrotondamento dei bordi */
+      box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+      /* Ombreggiatura */
+    }
+
+    body {
+      background-color: rgb(231, 229, 229);
+    }
+
+    .no-style {
+      width: auto;
+      /* Annulla larghezza */
+      height: auto;
+      /* Annulla altezza */
+      background-color: transparent;
+      /* Colore di sfondo trasparente */
+      border: none;
+      /* Rimuove il bordo */
+      box-shadow: none;
+      /* Rimuove ombreggiatura */
+      border-radius: 0;
+      /* Rimuove angoli arrotondati */
+    }
   </style>
 </head>
-<body >
-    <header>
-      <hr>
-        <div>
-          <h1 style="margin-left: 720px;"><i class="fa-solid fa-book-open"></i></h1>
-          <p style="font-size: 10px; margin-left: 630px;">By: Umar Shabbir, Akalpreet Singh and Davide Cirelli</p>
-          <h1 style="margin-left: 630px; font-weight: bold;">BOOKSHELF</h1>
-        </div>
-        <hr>
-    </header>
-    <body>
-      <div class="center-table">
-        <table>
-          <tr>
-              <td>
-                <!-- Button trigger modal -->
-                <div>
-                  <button style="height: 500px; width: 100%; padding: 0; border: none;" type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                    <img src="http://localhost:5000/static/img/HarryPotterFilosofale1.jpg" style="height: 100%; width: 100%; object-fit: fill; display: block; margin: 0; border-radius: 14px;">
-                  </button>
-                </div>
 
-                <!-- Modal -->
-                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                  <div class="modal-dialog modal-xl">
-                    <div class="modal-content">
-                      <div class="modal-header">
-                        <h1 class="modal-title fs-5" id="exampleModalLabel">HARRY POTTER E LA PIETRA FILOSOFALE</h1>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+<body>
+  <header>
+    <hr>
+    <div>
+      <h1 style="margin-left: 720px;"><i class="fa-solid fa-book-open"></i></h1>
+      <p style="font-size: 10px; margin-left: 630px;">By: Umar Shabbir, Akalpreet Singh and Davide Cirelli</p>
+      <h1 style="margin-left: 630px; font-weight: bold;">BOOKSHELF</h1>
+    </div>
+    <hr>
+  </header>
+
+  <body>
+    <div class="center-table">
+      <table>
+        <tr>
+          <td>
+
+            <div style="margin-left: 45%;">
+              <a href="/inserisci"><button style="border-radius: 100px;"><i class="fa-solid fa-plus"></i></button></a>
+            </div>
+
+          </td>
+          <td>
+            <!-- Button trigger modal -->
+            <div>
+              <button style="height: 500px; width: 100%; padding: 0; border: none;" type="button" class="btn"
+                data-bs-toggle="modal" data-bs-target="#exampleModal">
+                <img src="http://localhost:5000/static/img/HarryPotterFilosofale1.jpg"
+                  style="height: 100%; width: 100%; object-fit: fill; display: block; margin: 0; border-radius: 14px;">
+              </button>
+            </div>
+
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+              aria-hidden="true">
+              <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">HARRY POTTER E LA PIETRA FILOSOFALE</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
+                      <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                          class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                          aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                          aria-label="Slide 3"></button>
                       </div>
-                      <div class="modal-body">
-                        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
-                          <div class="carousel-indicators">
-                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                          </div>
 
-                          <table>
-                            <tr>
-                              <td class="no-style" style="width: 250px;">
+                      <table>
+                        <tr>
+                          <td class="no-style" style="width: 250px;">
 
-                                <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
-                                  <div class="carousel-inner">
-                                    <div class="carousel-item active" data-bs-interval="3000">
-                                      <img src="img/HarryPotterFilosofale1.jpg" class="d-block w-100" alt="...">
-                                    </div>
-                                    <div class="carousel-item" data-bs-interval="3000">
-                                      <img src="img/HarryPotterFilosofale2.jpg" class="d-block w-100" alt="...">
-                                    </div>
-                                  </div>
+                            <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+                              <div class="carousel-inner">
+                                <div class="carousel-item active" data-bs-interval="3000">
+                                  <img src="img/HarryPotterFilosofale1.jpg" class="d-block w-100" alt="...">
                                 </div>
-                              </td>
-                              <td class="no-style">
-                                Harry Potter e la Pietra Filosofale, il primo capitolo della celebre saga scritta da J.K. Rowling, ti invita <br> in un viaggio straordinario nel mondo incantato di Hogwarts, dove ogni pagina è ricca di avventure,<br> misteri e amicizie indimenticabili.<br><br>
+                                <div class="carousel-item" data-bs-interval="3000">
+                                  <img src="img/HarryPotterFilosofale2.jpg" class="d-block w-100" alt="...">
+                                </div>
+                              </div>
+                            </div>
+                          </td>
+                          <td class="no-style">
+                            Harry Potter e la Pietra Filosofale, il primo capitolo della celebre saga scritta da J.K.
+                            Rowling, ti invita <br> in un viaggio straordinario nel mondo incantato di Hogwarts, dove
+                            ogni pagina è ricca di avventure,<br> misteri e amicizie indimenticabili.<br><br>
 
-                                Harry, un ragazzino che vive una vita apparentemente ordinaria con i suoi antipatici zii, scopre di <br> essere in realtà un mago destinato a grandi imprese. Accolto nella Scuola di Magia e Stregoneria di <br> Hogwarts, si immerge in un universo di incantesimi, creature magiche e segreti. Insieme ai suoi nuovi amici, <br> Hermione Granger e Ron Weasley, Harry si troverà presto a confrontarsi con una misteriosa <br>pietra dai poteri straordinari e con l'ombra minacciosa di un mago oscuro che non ha mai smesso di perseguitarlo.<br><br>
+                            Harry, un ragazzino che vive una vita apparentemente ordinaria con i suoi antipatici zii,
+                            scopre di <br> essere in realtà un mago destinato a grandi imprese. Accolto nella Scuola di
+                            Magia e Stregoneria di <br> Hogwarts, si immerge in un universo di incantesimi, creature
+                            magiche e segreti. Insieme ai suoi nuovi amici, <br> Hermione Granger e Ron Weasley, Harry
+                            si troverà presto a confrontarsi con una misteriosa <br>pietra dai poteri straordinari e con
+                            l'ombra minacciosa di un mago oscuro che non ha mai smesso di perseguitarlo.<br><br>
 
-                                Un mix perfetto di magia, coraggio e avventura, Harry Potter e la Pietra Filosofale è una lettura <br> imperdibile per chiunque voglia riscoprire il potere dell'immaginazione. Inizia il viaggio che <br>ha incantato generazioni di lettori e lasciati trasportare in un mondo dove tutto è possibile!<br><br>
+                            Un mix perfetto di magia, coraggio e avventura, Harry Potter e la Pietra Filosofale è una
+                            lettura <br> imperdibile per chiunque voglia riscoprire il potere dell'immaginazione. Inizia
+                            il viaggio che <br>ha incantato generazioni di lettori e lasciati trasportare in un mondo
+                            dove tutto è possibile!<br><br>
 
-                                Il tuo biglietto per Hogwarts ti aspetta – sei pronto a salire sull'Espresso per la magia?
-                              </td>
-                            </tr>
-                          </table>
+                            Il tuo biglietto per Hogwarts ti aspetta – sei pronto a salire sull'Espresso per la magia?
+                          </td>
+                        </tr>
+                      </table>
 
-                        </div>
-                      </div>
-                      <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" >Modify</button>
-                        <button type="button" class="btn btn-danger">Delete Book</button>
-                      </div>
                     </div>
                   </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary">Modify</button>
+                    <button type="button" class="btn btn-danger">Delete Book</button>
+                  </div>
                 </div>
-              </td>
-              <td style="width: 25%;">  
+              </div>
+            </div>
+          </td>
+          <td></td>
+          <td></td>
 
-                <div style="margin-left: 45%;">
-                  <form action="/inserisci" method="POST">
-                    <button style="border-radius: 100px;" type="submit"><i class="fa-solid fa-plus"></i></button>
-                  </form> 
-                </div>  
+        </tr>
+        <tr>
 
-              </td>
-              <td style="width: 25%;">  
-                
-                <div style="margin-left: 45%;">
-                  <form method="POST">
-                    <button style="border-radius: 100px;" type="submit"><i class="fa-solid fa-plus"></i></button>
-                  </form> 
-                </div>  
+        </tr>
+        <tr>
 
-              </td>
-              <td style="width: 25%;">  
-                
-                <div style="margin-left: 45%;">
-                  <form method="POST">
-                    <button style="border-radius: 100px;" type="submit"><i class="fa-solid fa-plus"></i></button>
-                  </form> 
-                </div>  
+        </tr>
+        <tr>
 
-              </td>
-          </tr> 
-          <tr>
-            <td style="width: 25%;">  
-
-              <div style="margin-left: 45%;">
-                <form method="POST">
-                  <button style="border-radius: 100px;" type="submit"><i class="fa-solid fa-plus"></i></button>
-                </form> 
-              </div>  
-
-            </td>
-            <td style="width: 25%;">  
-              
-              <div style="margin-left: 45%;">
-                <form method="POST">
-                  <button style="border-radius: 100px;" type="submit"><i class="fa-solid fa-plus"></i></button>
-                </form> 
-              </div>  
-
-            </td>
-            <td style="width: 25%;">  
-              
-              <div style="margin-left: 45%;">
-                <form method="POST">
-                  <button style="border-radius: 100px;" type="submit"><i class="fa-solid fa-plus"></i></button>
-                </form> 
-              </div>  
-
-            </td>
-            <td style="width: 25%;">  
-              
-              <div style="margin-left: 45%;">
-                <form method="POST">
-                  <button style="border-radius: 100px;" type="submit"><i class="fa-solid fa-plus"></i></button>
-                </form> 
-              </div>  
-
-            </td>
-          </tr>
-          <tr>
-            <td style="width: 25%;">  
-
-              <div style="margin-left: 45%;">
-                <form method="POST">
-                  <button style="border-radius: 100px;" type="submit"><i class="fa-solid fa-plus"></i></button>
-                </form> 
-              </div>  
-
-            </td>
-            <td style="width: 25%;">  
-              
-              <div style="margin-left: 45%;">
-                <form method="POST">
-                  <button style="border-radius: 100px;" type="submit"><i class="fa-solid fa-plus"></i></button>
-                </form> 
-              </div>  
-
-            </td>
-            <td style="width: 25%;">  
-              
-              <div style="margin-left: 45%;">
-                <form method="POST">
-                  <button style="border-radius: 100px;" type="submit"><i class="fa-solid fa-plus"></i></button>
-                </form> 
-              </div>  
-
-            </td>
-            <td style="width: 25%;">  
-              
-              <div style="margin-left: 45%;">
-                <form method="POST">
-                  <button style="border-radius: 100px;" type="submit"><i class="fa-solid fa-plus"></i></button>
-                </form> 
-              </div>  
-
-            </td>
-          </tr>
-          <tr>
-            <td style="width: 25%;">  
-
-              <div style="margin-left: 45%;">
-                <form method="POST">
-                  <button style="border-radius: 100px;" type="submit"><i class="fa-solid fa-plus"></i></button>
-                </form> 
-              </div>  
-
-            </td>
-            <td style="width: 25%;">  
-              
-              <div style="margin-left: 45%;">
-                <form method="POST">
-                  <button style="border-radius: 100px;" type="submit"><i class="fa-solid fa-plus"></i></button>
-                </form> 
-              </div>  
-
-            </td>
-            <td style="width: 25%;">  
-              
-              <div style="margin-left: 45%;">
-                <form method="POST">
-                  <button style="border-radius: 100px;" type="submit"><i class="fa-solid fa-plus"></i></button>
-                </form> 
-              </div>  
-
-            </td>
-            <td style="width: 25%;">  
-              
-              <div style="margin-left: 45%;">
-                <form method="POST">
-                  <button style="border-radius: 100px;" type="submit"><i class="fa-solid fa-plus"></i></button>
-                </form> 
-              </div>  
-
-            </td>
-          </tr>
-        </table>
+        </tr>
+      </table>
     </div>
-    </body>
-    <footer>
+  </body>
+  <footer>
 
-    </footer>
+  </footer>
 </body>
+
 </html>

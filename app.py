@@ -11,7 +11,8 @@ def home():
 
 @app.route("/inserisci")
 def inserisci():
-    return "ciao"
+    return render_template("caricaLibro.html")
+
 
 if __name__ == "__main__":
     app.run(debug=True)
