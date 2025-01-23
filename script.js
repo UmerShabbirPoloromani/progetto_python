@@ -1,21 +1,32 @@
-async function submitForm() {
-    const form = document.getElementById('book-form');
-    const formData = new FormData(form);
+document.querySelector("form").addEventListener("submit", function (e) {
+    e.preventDefault();
 
-    // Creiamo un oggetto JSON dai dati del modulo
-    const bookData = {
-        titolo: formData.get('titolo'),
-        autore: formData.get('autore'),
-        descrizione: formData.get('descrizione')
+    // Cattura i dati del modulo
+    const titolo = document.querySelector('input[name="titolo"]').value;
+    const descrizione = document.querySelector('textarea[name="descrizione"]').value;
+    const immagineInput = document.querySelector('input[name="immagine"]');
+    const immagine = immagineInput.files.length > 0 ? "img/" + immagineInput.files[0].name : "";
+
+    // Crea l'oggetto JSON
+    const nuovoLibro = {
+        titolo: titolo,
+        descrizione: descrizione,
+        immagini: immagine ? [immagine] : []
     };
-    
-    // Invio al server
-    const response = await fetch('/add-book', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(bookData)
-    });
 
-    const result = await response.json();
-    alert(result.message);
-}
+    // Invia i dati al server
+    fetch('/aggiungi-libro', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(nuovoLibro)
+    })
+    .then(response => response.json())
+    .then(data => {
+        alert(data.message);
+    })
+    .catch(error => {
+        console.error('Errore:', error);
+    });
+});
