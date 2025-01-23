@@ -61,13 +61,10 @@
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             // Percorso del file JSON
-            const jsonFile = 'libri.json';
+            const jsonFile = 'http://localhost:5000/libri.json';
 
             // Elementi DOM
-            const bookMenu = document.getElementById('book-menu');
-            const bookTitle = document.getElementById('book-title');
-            const bookDescription = document.getElementById('book-description');
-            const bookImages = document.getElementById('book-images');
+            const bookTitle = document.getElementById('titolo');
 
             // Carica i dati JSON
             fetch(jsonFile)
@@ -91,7 +88,6 @@
                     });
                 })
                 .catch(error => console.error(error));
-
             // Popola il menu a tendina
             function populateMenu(books) {
                 books.forEach((book, index) => {
