@@ -176,7 +176,7 @@
           const modalElement = document.querySelector('#exampleModal');
           const modalInstance = bootstrap.Modal.getInstance(modalElement); // Ottieni l'istanza del modal
           modalInstance.hide(); // Chiudi il modal
-          const bookCard = document.querySelector(button[data-bs-target]="#exampleModal").closest('td'); // Trova il contenitore del libro
+          const bookCard = document.querySelector('button[data-bs-target="#exampleModal"]').closest('td'); // Trova il contenitore del libro
           if (bookCard) {
             bookCard.remove(); // Elimina il libro dal DOM
           }
